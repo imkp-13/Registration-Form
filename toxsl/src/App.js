@@ -174,7 +174,7 @@ const App = () => {
                 name="password"
                 value={password}
                 onChange={handleChange}
-                type="text"
+                type="password"
                 className="s-font"
                 placeholder="Enter your password"
               />
@@ -192,7 +192,7 @@ const App = () => {
                 name="confirmPassword"
                 value={confirmPassword}
                 onChange={handleChange}
-                type="text"
+                type="password"
                 className="s-font"
                 placeholder="Confirm your password"
               />
