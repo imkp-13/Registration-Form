@@ -1,0 +1,285 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #353935;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(114, 182, 227);
+  background: linear-gradient(
+    156deg,
+    rgba(114, 182, 227, 1) 0%,
+    rgba(154, 91, 180, 1) 100%
+  );
+}
+/* Scroll-bar Styling Starts */
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 50px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 50px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(114, 182, 227, 1);
+  border-radius: 50px;
+}
+/* Scroll-bar Styling Ends */
+/* Reusable Starts */
+/* Common Font Size Starts */
+.s-font {
+  font-size: 1.6rem;
+}
+.m-font {
+  font-size: 2rem;
+}
+.l-font {
+  font-size: 3rem;
+}
+/* Common Font Size Ends */
+/* Reusable Ends */
+
+.center_container {
+  background-color: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  max-height: 70%;
+  width: 55%;
+  border-radius: 7px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  padding: 2% 2.5% 3%;
+}
+.center_container .form_header {
+  margin: 0 0 3%;
+}
+.center_container .form_header h2::after {
+  content: "";
+  display: block;
+  width: 3.9rem;
+  height: 0px;
+  padding: 0 0 0.4rem;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 182, 227, 1) 0%,
+    rgba(154, 91, 180, 1) 100%
+  );
+}
+.center_container .form_body form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6%;
+}
+.center_container .form_body form .gender_select,
+.center_container .form_body form .btn_container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.center_container .form_body .form_label,
+.center_container.form_body .form_control_wrapper input {
+  font-weight: 600;
+}
+.center_container .form_body .form_label {
+  display: block;
+  margin: 0 0 2%;
+}
+.center_container .form_body .form_group {
+  margin-bottom: 5%;
+}
+.center_container .form_control_wrapper input {
+  line-height: 0;
+  width: 100%;
+  padding: 3% 3.5%;
+  border: 2px solid lightgrey;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+.center_container .form_control_wrapper input:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0px 0px 1px 2px rgb(114 182 227);
+}
+.center_container .form_control_wrapper input::placeholder {
+  font-weight: 500;
+}
+.center_container .form_body form .gender_select {
+  margin: 1.5% 0 0;
+}
+.center_container .form_body form .gender_select .choose {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  margin: 2.5% 0 0;
+}
+.center_container .form_body form .gender_select .choose label {
+  position: relative;
+  cursor: pointer;
+}
+.center_container .form_body form .gender_select .choose .gender_option {
+  width: calc(100% / 3);
+}
+.center_container .form_body form .gender_select .choose label input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -9999;
+}
+.center_container .form_body form .gender_select .choose label .check {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #dedcdd;
+  margin: 0 3% 0 0;
+}
+.center_container
+  .form_body
+  form
+  .gender_select
+  .choose
+  label
+  input:checked
+  ~ .check {
+  background-color: rgba(114, 182, 227, 1);
+}
+.center_container .form_body form .gender_select .choose label .check,
+.center_container .form_body form .gender_select .choose label .text {
+  vertical-align: middle;
+}
+.center_container .btn_container {
+  margin-top: 6%;
+}
+.center_container .btn_container button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 1.5% 0;
+  border-radius: 7px;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 182, 227, 1) 0%,
+    rgba(154, 91, 180, 1) 100%
+  );
+  transition: 1s;
+  letter-spacing: 2px;
+}
+.center_container .btn_container button:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(114, 182, 227, 1) 0%,
+    rgba(154, 91, 180, 1) 100%
+  );
+}
+.error{
+  color: rgb(219, 20, 20);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* ********************************************** Media Queries ********************************************** */
+
+@media only screen and (min-width: 2000px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media only screen and (max-width: 1999px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  html {
+    font-size: 73%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  html {
+    font-size: 68%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .center_container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 40%;
+  }
+  .center_container {
+    width: 90%;
+    max-height: 90%;
+    padding: 15px 15px 30px;
+  }
+  .center_container .form_header h2::after {
+    padding: 0 0 3px;
+  }
+  .center_container .form_header {
+    margin: 0 0 20px;
+  }
+  .center_container .form_body form .gender_select {
+    margin: 10px 0 0;
+  }
+  .center_container .form_body form .gender_select .choose {
+    margin: 10px 0 0;
+  }
+  .center_container .btn_container {
+    margin-top: 30px;
+  }
+  .center_container .btn_container button {
+    padding: 7px 0;
+  }
+  .center_container .form_body form {
+    column-gap: 15px;
+  }
+  .center_container .form_control_wrapper input {
+    padding: 7px 10px;
+  }
+  .center_container .form_body form .gender_select .choose label .check {
+    padding: 7px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center_container .form_body form {
+    display: block;
+  }
+  .center_container .form_body form .gender_select .choose {
+    display: block;
+  }
+  .center_container .form_body form .gender_select .choose .gender_option {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+}
